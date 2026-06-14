@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>VP Clips</title>
+  <title>VPZONE TV</title>
+  <link rel="icon" href="../assets/icon.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,15 +22,16 @@
             bg2: "#0e1422",
             card: "#161d2e",
             card2: "#1d2740",
-            accent: "#7c5cff",
-            accent2: "#9d6bff",
+            accent: "#f12e7a",
+            accent2: "#4fb6f2",
+            accentMid: "#9a4fc8",
             tagKill: "#ef4444",
             tagDeath: "#f97316",
             tagReaction: "#22c55e",
             tagStreak: "#f59e0b",
           },
           boxShadow: {
-            glow: "0 0 0 1px rgba(124,92,255,.35), 0 8px 30px -8px rgba(124,92,255,.5)",
+            glow: "0 0 0 1px rgba(241,46,122,.35), 0 8px 30px -8px rgba(79,182,242,.5)",
           },
         },
       },
@@ -40,17 +42,18 @@
     body { font-family: Inter, system-ui, sans-serif; }
     .app-bg {
       background:
-        radial-gradient(1200px 500px at 10% -10%, rgba(124,92,255,.18), transparent 60%),
-        radial-gradient(1000px 500px at 110% 10%, rgba(157,107,255,.14), transparent 55%),
+        radial-gradient(1200px 500px at 10% -10%, rgba(241,46,122,.18), transparent 60%),
+        radial-gradient(1000px 500px at 110% 10%, rgba(79,182,242,.16), transparent 55%),
         #0b0f1a;
     }
     .glass { background: linear-gradient(180deg, rgba(29,39,64,.65), rgba(22,29,46,.65)); backdrop-filter: blur(8px); }
     .card-h { transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
-    .card-h:hover { border-color: rgba(124,92,255,.4); }
-    .btn-grad { background-image: linear-gradient(135deg, #7c5cff, #9d6bff); }
-    .btn-grad:hover { filter: brightness(1.08); box-shadow: 0 8px 24px -8px rgba(124,92,255,.7); }
-    .nav-item.active { background-image: linear-gradient(135deg, #7c5cff, #9d6bff); color: #fff; box-shadow: 0 8px 24px -10px rgba(124,92,255,.8); }
-    .mode-card input:checked + .mode-inner { border-color: #7c5cff; background: rgba(124,92,255,.12); box-shadow: 0 0 0 1px rgba(124,92,255,.5); }
+    .card-h:hover { border-color: rgba(241,46,122,.4); }
+    .btn-grad { background-image: linear-gradient(135deg, #f12e7a, #9a4fc8, #4fb6f2); }
+    .btn-grad:hover { filter: brightness(1.08); box-shadow: 0 8px 24px -8px rgba(241,46,122,.7); }
+    .nav-item.active { background-image: linear-gradient(135deg, #f12e7a, #9a4fc8, #4fb6f2); color: #fff; box-shadow: 0 8px 24px -10px rgba(79,182,242,.8); }
+    .mode-card input:checked + .mode-inner { border-color: #f12e7a; background: rgba(241,46,122,.12); box-shadow: 0 0 0 1px rgba(241,46,122,.5); }
+    .brand-wordmark { background: linear-gradient(135deg, #f12e7a, #9a4fc8, #4fb6f2); -webkit-background-clip: text; background-clip: text; color: transparent; }
     ::-webkit-scrollbar { width: 10px; height: 10px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #2a3550; border-radius: 8px; border: 2px solid transparent; background-clip: content-box; }
@@ -66,9 +69,11 @@
   <header class="sticky top-0 z-30 glass border-b border-white/5">
     <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl btn-grad flex items-center justify-center text-lg shadow-glow">🎬</div>
+        <div class="w-9 h-9 rounded-xl overflow-hidden shadow-glow flex items-center justify-center">
+          <img src="../assets/vpzone-logo.png" alt="VPZONE TV" class="w-full h-full object-contain" />
+        </div>
         <div>
-          <div class="font-extrabold tracking-tight leading-none text-lg">VP <span class="text-accent2">Clips</span></div>
+          <div class="font-extrabold tracking-tight leading-none text-lg brand-wordmark">VPZONE <span>TV</span></div>
           <div class="text-[11px] text-gray-400 -mt-0.5">Auto highlights · montages · live capture</div>
         </div>
       </div>
@@ -174,11 +179,11 @@
         <section class="glass card-h border border-white/5 p-6 rounded-2xl space-y-3">
           <h2 class="text-lg font-bold">🎬 Render Mode</h2>
           <label class="flex items-center gap-3 p-2.5 rounded-lg border border-white/10 bg-bg2/60 cursor-pointer">
-            <input type="radio" name="renderMode" value="standard" checked class="w-4 h-4 accent-[#7c5cff]" />
+            <input type="radio" name="renderMode" value="standard" checked class="w-4 h-4 accent-[#f12e7a]" />
             <span><span class="font-semibold">Standard</span> <span class="text-gray-400 text-sm">— original audio, per clip</span></span>
           </label>
           <label class="flex items-center gap-3 p-2.5 rounded-lg border border-white/10 bg-bg2/60 cursor-pointer">
-            <input type="radio" name="renderMode" value="montage" class="w-4 h-4 accent-[#7c5cff]" />
+            <input type="radio" name="renderMode" value="montage" class="w-4 h-4 accent-[#f12e7a]" />
             <span><span class="font-semibold">Montage</span> <span class="text-gray-400 text-sm">— music-synced highlights</span></span>
           </label>
 
@@ -280,7 +285,7 @@
 
           <label class="text-sm text-gray-400">Auto-clip while recording</label>
           <label class="flex items-center gap-2">
-            <input id="autoClip" type="checkbox" checked class="w-4 h-4 accent-[#7c5cff]" />
+            <input id="autoClip" type="checkbox" checked class="w-4 h-4 accent-[#f12e7a]" />
             <span class="text-sm text-gray-300">Detect &amp; clip kills live</span>
           </label>
         </div>
