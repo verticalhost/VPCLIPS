@@ -39,7 +39,7 @@ function downloadFile(url, dest, headers = {}) {
 
     const options = {
       headers: {
-        "User-Agent": "NekoSuneVR",
+        "User-Agent": "VPClips",
         ...headers
       }
     };
@@ -155,7 +155,7 @@ async function downloadYT_DLP() {
   const apiData = await new Promise((resolve, reject) => {
     https.get(
       YTDLP_API,
-      { headers: { "User-Agent": "NekoSuneVR" } },
+      { headers: { "User-Agent": "VPClips" } },
       (res) => {
         let data = "";
         res.on("data", (c) => (data += c));

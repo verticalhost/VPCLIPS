@@ -1,19 +1,19 @@
 {
-  "name": "ai-clipper",
+  "name": "vpclips",
   "version": "1.0.0",
   "description": "AI-ish clipping app with VOD import + loud reaction detection",
   "main": "main.js",
   "bin": "main.js",
-  "author": "NekoSuneVR",
+  "author": "Solutions Techno-Rédac inc.",
   "scripts": {
     "test": "electron .",
     "build": "electron-builder",
     "build:win": "electron-builder --win"
   },
   "build": {
-    "copyright": "Copyright © 2025 NekoSuneVR",
-    "appId": "com.nekosunevr.aiclipper",
-    "productName": "NekosAIClipper",
+    "copyright": "Copyright © 2025 Solutions Techno-Rédac inc.",
+    "appId": "com.verticalhost.vpclips",
+    "productName": "VPClips",
     "nsis": {
       "allowToChangeInstallationDirectory": true,
       "license": "license.txt",
@@ -39,10 +39,10 @@
     },
     "appx": {
       "backgroundColor": "#ffffff",
-      "displayName": "NekosAIClipper",
-      "publisher": "CN=NekoSuneVR",
-      "publisherDisplayName": "NekoSuneVR",
-      "identityName": "com.nekosunevr.aiclipper"
+      "displayName": "VPClips",
+      "publisher": "CN=Solutions Techno-Rédac inc.",
+      "publisherDisplayName": "Solutions Techno-Rédac inc.",
+      "identityName": "com.verticalhost.vpclips"
     },
     "directories": {
       "output": "dist",

@@ -1,4 +1,4 @@
 [submodule "core/gameConfigs"]
 	path = core/gameConfigs
-	url = https://github.com/NekoSuneProjects/nekos-ai-clipper
+	url = https://github.com/verticalhost/VPCLIPS
 	branch = gameconfig

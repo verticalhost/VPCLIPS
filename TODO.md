@@ -1,4 +1,4 @@
-# NekosAIClipper — Roadmap / TODO
+# VPClips — Roadmap / TODO
 
 ## ✅ Done (this pass)
 - **FPS/gameplay event detection now works.** Fixed the PNG `image2pipe` demux bug that
@@ -130,7 +130,7 @@ tiny crops calibrated to one capture don't generalize. Strategy + TODO:
       downloadable outputs. `boot-tools.js` points core at system ffmpeg/yt-dlp; `Dockerfile`
       for Linux deploy. Verified serial queue + tool short-circuit.
 - [x] **Settings page + persisted output folder** (DONE) — `core/settings.js` stores settings
-      in userData; default render folder = `Documents\NekosAIClipper`, changeable from the
+      in userData; default render folder = `Documents\VPClips`, changeable from the
       Settings tab, remembered across launches. Renders default to it (no folder prompt).
 - [x] **Render progress + ETA** (DONE) — montage & standard renderers emit ffmpeg progress;
       Output tab shows a % bar + estimated time left (e.g. "~1h 5m left"). Verified math.

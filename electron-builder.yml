@@ -1,8 +1,8 @@
-appId: com.nekosunevr.aiclipper
-productName: NekosAIClipper
-copyright: Copyright 2025 NekoSuneVR
+appId: com.verticalhost.vpclips
+productName: VPClips
+copyright: Copyright 2025 Solutions Techno-Rédac inc.
 build:
-    appId: com.nekosunevr.aiclipper
+    appId: com.verticalhost.vpclips
     win32:
         target: nsis
     win64:

@@ -54,7 +54,7 @@ app.whenReady().then(async () => {
   settings.init(app.getPath("userData"), app.getPath("documents"));
 
   // Store downloaded music + 30s previews under Documents (set BEFORE musicLibrary loads).
-  process.env.MUSIC_DIR = path.join(app.getPath("documents"), "NekosAIClipper", "music");
+  process.env.MUSIC_DIR = path.join(app.getPath("documents"), "VPClips", "music");
 
   global.TOOLS = await prepareTools();
 
@@ -540,7 +540,7 @@ ipcMain.handle("vod:downloadAndAnalyseWithMode", async (_event, payload) => {
     const userDownloads = app.getPath("downloads");
 
     // Our custom folder inside Downloads
-    const DOWNLOAD_DIR = path.join(userDownloads, "NekosAIClipper");
+    const DOWNLOAD_DIR = path.join(userDownloads, "VPClips");
 
     // Ensure folder exists
     if (!fs.existsSync(DOWNLOAD_DIR)) {

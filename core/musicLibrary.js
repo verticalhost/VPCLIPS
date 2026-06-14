@@ -21,7 +21,7 @@ const { prepareTools, TOOLS_DIR } = require("../tools/toolsManager");
 // Falls back to the downloaded cache, then the bundled MusicTracks.json (offline).
 const SOURCES_FILE = path.join(__dirname, "MusicTracks.json");          // bundled fallback
 const REMOTE_SOURCES_URL = process.env.MUSIC_TRACKS_URL ||
-  "https://raw.githubusercontent.com/NekoSuneProjects/nekos-ai-clipper/musictracks/MusicTracks.json";
+  "https://raw.githubusercontent.com/verticalhost/VPCLIPS/musictracks/MusicTracks.json";
 const MUSIC_CACHE_DIR = process.env.MUSIC_DIR || path.join(TOOLS_DIR, "music");
 const SOURCES_CACHE_FILE = path.join(TOOLS_DIR, "MusicTracks.cache.json");
 
@@ -44,7 +44,7 @@ function parseSources(data) {
 
 function fetchRemoteSources() {
   return new Promise((resolve) => {
-    const req = https.get(REMOTE_SOURCES_URL, { headers: { "User-Agent": "NekosAIClipper" } }, (res) => {
+    const req = https.get(REMOTE_SOURCES_URL, { headers: { "User-Agent": "VPClips" } }, (res) => {
       if (res.statusCode !== 200) { res.resume(); return resolve(null); }
       let data = "";
       res.on("data", (c) => (data += c));

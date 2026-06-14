@@ -16,7 +16,7 @@ function ensureDir(dir) {
 function init(userDataDir, documentsDir) {
   settingsPath = path.join(userDataDir, "settings.json");
   const defaults = {
-    outputDir: path.join(documentsDir || userDataDir, "NekosAIClipper"),
+    outputDir: path.join(documentsDir || userDataDir, "VPClips"),
     encoder: "auto", // "auto" | "gpu" | "cpu"
   };
   try {

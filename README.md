@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/icon.ico" width="100" alt="Nekos AI Clipper" />
+<img src="assets/icon.ico" width="100" alt="VP Clips" />
 
-# 🎬 Nekos AI Clipper — Desktop App
+# 🎬 VP Clips — Desktop App
 
 ### Auto-clip kills, deaths, wins & hype moments — then montage them with music. On your gaming PC.
 
@@ -40,7 +40,7 @@ First launch auto-downloads its own **ffmpeg + yt-dlp + python** into AppData �
 
 **Build an installer:**
 ```bash
-npm run build:win   # -> dist/NekosAIClipper-Setup-x.x.x.exe / .msi
+npm run build:win   # -> dist/VPClips-Setup-x.x.x.exe / .msi
 ```
 > Builds are produced by CI: push to **`TESTING`** → BETA, **`RELEASE`** → release.
 
@@ -66,6 +66,6 @@ git commit -am "sync app from DEV" && git push
 
 <div align="center">
 
-Part of **[Nekos AI Clipper](https://github.com/NekoSuneProjects/nekos-ai-clipper)** · Made with 💜 by NekoSuneVR
+**[VP Clips](https://github.com/verticalhost/VPCLIPS)** · Change made with 💜 by **Solutions Techno-Rédac inc.** · Fork of [Nekos AI Clipper](https://github.com/NekoSuneProjects/nekos-ai-clipper)
 
 </div>

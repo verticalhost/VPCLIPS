@@ -1,4 +1,4 @@
-name: (Windows x64) Release Build & Upload NekosAIClipper
+name: (Windows x64) Release Build & Upload VPClips
 
 permissions:
   contents: write
@@ -48,14 +48,14 @@ jobs:
             $channel = "beta"
             $tag = "BETA-${{ github.run_number }}"
             $version = "$($env:BASE_VERSION)-beta-${{ github.run_number }}"
-            $name = "NekosAIClipper BETA V$($env:BASE_VERSION)-${{ github.run_number }}"
+            $name = "VPClips BETA V$($env:BASE_VERSION)-${{ github.run_number }}"
             $prerelease = "true"
           }
           else {
             $channel = "release"
             $tag = $env:BASE_VERSION
             $version = $env:BASE_VERSION
-            $name = "NekosAIClipper $($env:BASE_VERSION)"
+            $name = "VPClips $($env:BASE_VERSION)"
             $prerelease = "false"
           }
 
@@ -108,8 +108,8 @@ jobs:
           prerelease: ${{ env.PRERELEASE == 'true' }}
           make_latest: ${{ env.PRERELEASE != 'true' }}
           files: |
-            dist/NekosAIClipper-Setup-${{ env.BASE_VERSION }}.exe
-            dist/NekosAIClipper-Setup-${{ env.BASE_VERSION }}.msi
+            dist/VPClips-Setup-${{ env.BASE_VERSION }}.exe
+            dist/VPClips-Setup-${{ env.BASE_VERSION }}.msi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -183,8 +183,8 @@ jobs:
 
           # --- Links + metadata ---------------------------------------------------
           $releaseUrl = "https://github.com/$repo/releases/tag/$($env:TAG)"
-          $exeUrl     = "https://github.com/$repo/releases/download/$($env:TAG)/NekosAIClipper-Setup-$($env:BASE_VERSION).exe"
-          $msiUrl     = "https://github.com/$repo/releases/download/$($env:TAG)/NekosAIClipper-Setup-$($env:BASE_VERSION).msi"
+          $exeUrl     = "https://github.com/$repo/releases/download/$($env:TAG)/VPClips-Setup-$($env:BASE_VERSION).exe"
+          $msiUrl     = "https://github.com/$repo/releases/download/$($env:TAG)/VPClips-Setup-$($env:BASE_VERSION).msi"
           $compareUrl = if ($env:PREV_TAG) { "https://github.com/$repo/compare/$($env:PREV_TAG)...$($env:TAG)" } else { $releaseUrl }
           $prevDisp   = if ($env:PREV_TAG) { "$tick$($env:PREV_TAG)$tick" } else { "—" }
           $isBeta     = ($env:CHANNEL -eq "beta")
@@ -202,7 +202,7 @@ jobs:
           ) -join "`n"
 
           $payload = @{
-            username   = "NekosAIClipper Releases"
+            username   = "VPClips Releases"
             avatar_url = "https://github.com/$owner.png"
             content    = "<@&1384262560395559122> **NEW $($env:CHANNEL.ToUpper()) BUILD IS OUT**"
             embeds = @(
